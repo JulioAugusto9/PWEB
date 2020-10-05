@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>JOKENPO</title>
+    <script src="jokenpo.js"></script>
+    <style>
+        div {
+            padding: 20vh 0 30vh 0;
+            height: 50vh;
+            /* background-color: red; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        button {
+            height: 30px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Escolha:</h1>
+        <button onclick="jokenpo('Pedra')">Pedra</button>
+        <button onclick="jokenpo('Papel')">Papel</button>
+        <button onclick="jokenpo('Tesoura')">Tesoura</button>
+    </div>
+</body>
+</html>
