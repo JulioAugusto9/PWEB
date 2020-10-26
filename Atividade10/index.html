@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos</title>
+    <style>
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="titulo" >Abra a Janela</h1>
+        <img 
+            src="JanelaFechada.jpg" 
+            alt="Janela"
+            onmouseover="abrir(this)"
+            onmouseout="fechar(this)"
+            onclick="quebrar(this)"
+        >
+    </div> 
+
+    <script src="eventos.js"></script>
+</body>
+</html>
