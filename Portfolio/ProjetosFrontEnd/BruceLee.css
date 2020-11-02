@@ -1,0 +1,38 @@
+section div, header, footer {
+    margin: 0 10px 0 10px;
+}
+
+header {
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+section aside {
+    float: right;
+    width: 30%;
+}
+
+section article {
+    float: left;
+    width: 60%;
+}
+
+img {
+    height: 150px;
+    float: left;
+}
+
+footer {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    text-align: center;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-around;
+}

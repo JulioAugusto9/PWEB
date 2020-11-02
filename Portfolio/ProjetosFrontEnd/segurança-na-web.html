@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Julio Almeida">
+    <meta name="keywords" content="Segurança,Web,OWASP,TOP10">
+    <title>Segurança na Web</title>
+</head>
+<body text="#080808">
+    <h1 style="text-align: center;">Segurança na Web</h1>
+    <h2 style="text-align: center;">Uma pesquisa escolar sobre segurança na web feita na aula de Programação para Web</h2>
+
+    <h5><strong><em>Autor: Julio Almeida</em></strong></h5>
+
+    <dl>
+        <dt><a href="#introd">Introdução</a></dt>
+        <dt><a href="#top1">1. As 10 principais vulnerabilidades</a></dt>
+        <dl><a href="#top1.1">1.1. Injection</a></dl>
+        <dl><a href="#top1.2">1.2. Broken Authentication</a></dl>
+        <dl><a href="#top1.3">1.3. Sensitive Data Exposure</a></dl>
+        <dl><a href="#top1.4">1.4. XML External Entities (XXE)</a></dl>
+        <dl><a href="#top1.5">1.5. Broken Access Control</a></dl>
+        <dl><a href="#top1.6">1.6. Security Misconfiguration</a></dl>
+        <dl><a href="#top1.7">1.7. Cross-Site Scripting (XSS)</a></dl>
+        <dl><a href="#top1.8">1.8. Insecure Deserialization</a></dl>
+        <dl><a href="#top1.9">1.9. Using Components with Known Vulnerabilities</a></dl>
+        <dl><a href="#top1.10">1.10. Insufficient Logging & Monitoring</a></dl>
+        <dt><a href="#top2">2. Dicas</a></dt>
+        <dt><a href="#concl">Conclusão</a></dt>
+        <dt><a href="#referencias">Referências</a></dt>
+        <dt><a href="#EnviarComentario">Enviar um comentário</a></dt>
+    </dl>
+
+    <h3 id="introd">Introdução</h3>
+    <p>A Segurança na WEB é uma requisito não-funcional muito importante para qualquer aplicação que utilize a internet como parte de sua plataforma. Os usuários precisam saber que seus dados estão seguros. Existem legislações que garantem o direito do usuário de ter segurança. E a fidelização do cliente é afetada diretamente, parece que não, mas assim que há um vazamento de informações a empresa que foi alvo perde muita credibilidade.</p>
+
+    <h3 id="top1">1. As 10 principais vulnerabilidades</h3>
+    <p>Existem vulnerabilidades nos sistemas que podem ser exploradas por usuários mal-intencionados para obter acesso não-permitido, realizar ataques de phishing, roubar informações, e até mesmo danificar o sistema. </p>
+    <p>Existe uma lista de vulnerabilidades conhecidas publicamente chamada CVE (Common Vulnerabilities and Exposures), que sempre está publicando as novas descobertas com um número de identificação, uma descrição e pelo menos uma referência pública. Seu site é o https://cve.mitre.org/ . Ela é uma lista bem extensa. Neste trabalho serão mencionadas apenas algumas vulnerabilidades mais comuns.</p>
+    <p>As principais vulnerabilidades de segurança em aplicações web são também as mais comuns, e exatamente por isso, são as mais perigosas. Antes de tentar métodos mais complexos, um invasor certamente tentará hackear sua aplicação com estratégias mais simples. Só depois de testar as vulnerabilidades mais comuns e falhar o hacker muda para uma abordagem mais complexa, ou desiste de invadir seu sistema.</p>
+    <p>O OWASP, ou Projeto Aberto de Segurança em Aplicações Web, é uma comunidade online que cria e disponibiliza de forma gratuita artigos, metodologias, documentação, ferramentas e tecnologias no campo da segurança de aplicações web. Ele lista as 10 vulnerabilidades mais comuns nas aplicações web a cada certo tempo, a última edição foi a de 2017. A seguir estão as que apareceram nessa edição, junto de uma explicação sucinta sobre cada uma.</p>
+
+    <img src="https://3k64nh47gxyj39ud4k2tc04b-wpengine.netdna-ssl.com/wp-content/uploads/2017/11/owasp-2017-apis-seguranca-top-10-riscos-7-1.png" alt="OWASP TOP 10 vulnerabilidades 2017">
+
+    <h4 id="top1.1">1.1. Injection</h4>
+    <p>Esse tipo de falha é muito conhecida pela técnica SQL Injection, onde o invasor realiza consultas indevidas no banco de dados, por meio de um formulário ou URL.</p>
+    <p>Com isso, o hacker consegue logar em seu sistema com privilégios de administrador, e explorar este acesso como desejar.</p>
+
+    <h4 id="top1.2">1.2. Broken Authentication</h4>
+    <p>Essa falha ocorre quando o sistema não utiliza métodos confiáveis de autenticação e armazenamento das informações do usuário, com credenciais de acesso que facilitam ataques de força bruta.</p>
+    <p>Um dos exemplos mais comuns de broken authentication é utilizar senhas muito curtas que facilitam ataques de força bruta. Normalmente, é a primeira forma que um cracker tentará utilizar para invadir seu sistema.</p>
+    <p>A solução mais imediata para este problema é criar uma política de senhas seguras, com mínimo de caracteres, combinação de letras e números, etc. </p>
+
+    <h4 id="top1.3">1.3. Sensitive Data Exposure</h4>
+    <p>As ferramentas de inspecionar elementos em uma página ou aplicação web, como o Chrome DevTools, estão entre as ferramentas preferidas dos desenvolvedores, e também dos hackers mal-intencionados.</p>
+    <p>Muitas APIs não protegem devidamente as informações que são transmitidas através delas, o que permite que invasores tirem proveito dos parâmetros retornados por ela, simplesmente inspecionando a aba ‘network’ do seu sistema.</p>
+    <p>Quanto a isso, é necessário dedicar uma atenção especial ao definir como estas informações vão trafegar pela interface, e criptografá-las devidamente.</p>
+
+    <h4 id="top1.4">1.4. XML External Entities (XXE)</h4>
+    <p>Esta vulnerabilidade é específica de sistemas que trabalham com a linguagem XML, como por exemplo, software emissores de documentos fiscais eletrônicos.</p>
+    <p>Invasores podem explorar processadores de XML vulneráveis, onde é possível injetar códigos maliciosos e enviar para uma aplicação que fará a leitura desse XML.</p>
+
+    <h4 id="top1.5">1.5. Broken Access Control</h5>
+    <p>Essa falha ocorre em aplicações que possuem páginas, rotas com informações que apenas o administrador deveria ter acesso, porém o controle de usuários não funciona.</p>
+    <p>Neste formato, o hacker consegue autenticar-se como administrador, e a partir daí, acessar, copiar e até excluir seus dados.</p>
+    <p>Para prevenir problemas de broken access control, é necessário que a validação do perfil de acesso venha do seu servidor, e não possa ser alterada externamente.</p>
+
+    <h4 id="top1.6">1.6. Security Misconfiguration</h4>
+    <p>Se trata de configurações padrão de fábrica, informações abertas na nuvem, headers http configurados incorretamente, erros verbosos que indicam com precisão o motivo do erro.</p>
+    <p>A solução desse problema é bem simples: sempre lembrar-se de excluir os arquivos e configurações default dos frameworks que utilizar. Alguns frameworks vão te lembrar disso após a instalação. Outros, não.</p>
+
+    <h4 id="top1.7">1.7. Cross-Site Scripting (XSS)</h4>
+    <p>Assim como SQL Injection, essa falha é muito conhecida na internet. Através dela, invasores conseguem inserir códigos maliciosos de javascript e tags html na página.</p>
+    <p>Normalmente, o cross-site scripting requer um determinado comportamento do usuário, como acessar um link específico. No entanto, quando bem executada, este tipo de fraude é muito difícil de identificar, principalmente para usuários leigos.</p>
+
+    <h4 id="top1.8">1.8. Insecure Deserialization</h4>
+    <p>Falha muito utilizada para execução remota de códigos maliciosos. Mesmo quando essa falha de segurança não resulta em um acesso remoto por parte do hacker, ele podem utilizar a brecha para uma escalação de privilégios, configurando-se como administrador.</p>
+
+    <h4 id="top1.9">1.9. Using Components with Known Vulnerabilities</h4>
+    <p>Mesmo que sua aplicação esteja desenvolvida seguindo um padrão seguro, as bibliotecas de terceiros que sua aplicação utiliza podem possuir falhas que são conhecidas na internet. Isso resulta em exploits, softwares prontos para serem utilizados para uma invasão.</p>
+    <p>Assim, é necessário ficar atento a possíveis vulnerabilidades de todos os componentes, bibliotecas e APIs que você irá consumir em seu software.</p>
+
+    <h4 id="top1.10">1.10. Insufficient Logging & Monitoring</h4>
+    <p>Um sistema sem logs, não consegue detectar que em algum lugar de sua API/Sistema alguém está tentando explorar alguma falha.</p>
+    <p>Muitos desenvolvedores são resistentes a implementar um módulo de logs no seu sistema, principalmente devido ao peso destes dados no banco. Se este for o problema, defina um período de auto-exclusão do log que você pode suportar. Um mês é o mínimo!</p>
+    <p>Outra solução é o monitoramento em tempo real, que permite a você e sua equipe perceber comportamentos estranhos no seu sistema, como picos ou quedas absurdas de acesso.</p>
+    <p>Assim, é importante manter painéis de informações ao vivo da sua aplicação, normalmente em monitores ou televisões sempre ligados nesta tela, com alertas sonoros caso julgue necessário.</p>
+
+    <h3 id="top2">2. Dicas</h3>
+    <p>Existem dicas de segurança que podemos seguir para diminuir o risco que corremos. Do lado dos profissionais é necessário cuidar as configurações de rede e de servidores, garantir que as senhas sejam fortes, gerenciar os usuários e suas permissões, não deixar dados sensíveis expostos a quem não deve poder acessá-los, dentre outras. </p>
+    <p>Os usuários comuns que acessam a internet no seu dia a dia também podem seguir algumas dicas, como manter em seu computador um bom antivírus, sempre atualizado; Deixar o firewall do Windows sempre ativado; Fazer sempre as atualizações necessárias do seu Sistema Operacional; Nunca instalar programas piratas em seu computador, eles podem trazer vírus ou outros programas perigosos; Não abrir pen-drives ou CDs/DVDs de outras pessoas sem antes passar o antivírus; Seguir sempre as orientações de seu banco para acessar sua conta pela Internet; Não digitar senhas e dados pessoais em computadores públicos (lan houses, empresas, etc); Não criar senhas com datas de aniversários, sequências numéricas fáceis ou nome de pessoas. Uma sugestão é criar senhas intercalando letras, números e caracteres especiais (#, por exemplo); Ter cuidado ao utilizar o cartão de crédito em compras online. Ter certeza de que a loja virtual é segura; Não clicar em links mostrados por e-mails desconhecidos. Eles costumam instalar vírus ou cavalos-de-tróia (programas que roubam dados do computador); Não divulgar dados pessoais (endereços, números de documentos, etc.) em redes sociais (Facebook, Twitter, etc.).</p>
+
+    <h3 id="concl">Conclusão</h3>
+    <p>Ao conhecer as principais vulnerabilidades é possível se proteger contra elas. Existe uma grande comunidade empenhada em descobrir e divulgar essas vulnerabilidades, para que logo possam ser consertadas. É importante sempre manter os programas que utilizamos atualizados para ter as últimas atualizações de seguranças e não ser vítima da exploração de uma nova falha descoberta. Temos que seguir certos cuidados tanto como profissionais que desenvolvem ou operam e mantêm sistemas quanto como usuários comuns, para não ser prejudicados por terceiros mal-intencionados.</p>
+
+    <h3 id="referencias">Referências</h3>
+    <ul>
+        <li>
+            <p>
+                The Mitre Corporation; Lista de Vulnerabilidades e exposições comuns (CVE – Common Vulnerabilities and Exporures);
+                <a href="https://cve.mitre.org/" title="Common Vulnerabilities and Exposures" target="_blank">cve.mitre.org</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                OWASP; OWASP Top 10 - 2017 The Ten Most Critical Web Application Security Risks (versão portuguesa); 
+                <a href="https://wiki.owasp.org/images/0/06/OWASP_Top_10-2017-pt_pt.pdf">OWASP TOP10 2017</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                Rogério, Fábio; SEGURANÇA EM APLICAÇÕES WEB: AS 10 PRINCIPAIS VULNERABILIDADES; 
+                <a href="https://blog.tecnospeed.com.br/seguranca-em-aplicacoes-web/">blog.tecnospeed.com.br/seguranca-em-aplicacoes-web</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                Dalamura, Marcos; Dicas de segurança na WEB; 
+                <a href="https://www.acessa.com/tecnologia/arquivo/artigo/2019/09/18-dicas-seguranca-web/">acessa.com/tecnologia/arquivo/artigo/2019/09/18-dicas-seguranca-web</a>
+            </p>
+        </li>
+    </ul>
+
+    <h3 id="EnviarComentario">Enviar um comentário</h3>
+    <form method="post">
+        <p>
+            <label>Seu Nome:</label>
+            <br>
+            <input type="text" name="nome" required size="30" maxlength="50" pattern="[a-zA-Z\s]+$">
+        </p>
+        <p>
+            <label>Email:</label>
+            <br>
+            <input type="email" name="email" required size="50" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="exemplo@email.com">
+        </p>
+        <p>
+            <label>Assunto:</label>
+            <br>
+            <input type="text" name="assunto" size="50" maxlength="50">
+        </p>
+        <p>
+            <label>Comentário:</label>
+            <br>
+            <textarea name="comentario" cols="100" rows="8"></textarea>
+        </p>
+        <p>
+            <input type="checkbox"> Marcar como urgente
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+
+
+</body>
+</html>
+
+<!-- 
+    <h3></h3>
+    <p></p>
+-->

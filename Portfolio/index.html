@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Julio Almeida - Portfolio</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+    
+    <section class="sobre" id="sobre">
+        <h1 class="anim">Julio Almeida</h1>
+        <h2 class="anim">Sobre</h2>
+    
+        <img class="anim" src="./img/Julio.jpeg" alt="Julio Almeida">
+        
+        <div class="anim">
+            <p id="apres"></p>
+            <p>
+                Aspirante a desenvolvedor de Software.
+            </p>
+        </div>     
+    </section>
+    
+    <h2 id="portfolio">Portfólio</h2>
+    <h3>Páginas Estáticas</h3> 
+    <div class="lista" id="estaticas">
+        <div>
+            <h4>Artigo sobre Segurança na Web</h4>
+            <iframe src="./ProjetosFrontEnd/segurança-na-web.html" frameborder="0"></iframe>
+            <a href="./ProjetosFrontEnd/segurança-na-web.html">Ver na página</a>
+        </div>
+        <div>
+            <h4>Artigo sobre Bruce Lee</h4>
+            <iframe src="./ProjetosFrontEnd/BruceLee.html" frameborder="0"></iframe>
+            <a href="./ProjetosFrontEnd/BruceLee.html">Ver na página</a>
+        </div>
+        <div>
+            <h4>Janela Interativa</h4>
+            <iframe src="./ProjetosFrontEnd/Janela.html" frameborder="0"></iframe>
+            <a href="./ProjetosFrontEnd/Janela.html">Ver na página</a>
+        </div>
+    </div>
+    
+    <h3>Projetos no GitHub</h3>
+    <div class="lista GH">
+        <div>
+            <h4>Be The Hero</h4>
+            <p>
+                Aplicação para ONGs cadastrarem causas de caridade <br>
+                Frontend: ReactJS <br>
+                Backend: NodeJS, SQLite, Knex
+            </p>
+            <a href="https://github.com/JulioAugusto9/BeTheHero">Link</a>
+        </div>
+        <div>
+            <h4>API REST de Ordens de Serviço</h4>
+            <p>Tecnologias: Spring (Boot, MVC, Data), MySQL, Flyway</p>
+            <a href="https://github.com/JulioAugusto9/ordensdeservico-api">Link</a>
+        </div>
+        <div>
+            <h4>API REST de Fatura de Cartão de Crédito</h4>
+            <p>
+                Consulta uma api externa e oferece endpoints mais organizados <br>
+                Tecnologias: Spring (Boot, MVC)
+            </p>
+            <a href="https://github.com/JulioAugusto9/historicofatura-api">Link</a>
+        </div>
+        
+    </div>
+
+    <h2 id = "contato">Contato</h2>
+    <div class="lista contato">
+        <a href="mailto:julio.a.r.almeida@gmail.com">
+            <img src="./img/email.jpg" alt="julio.a.r.almeida@gmail.com">
+        </a>
+        <a href="https://www.linkedin.com/in/julio-almeida-39740018a/">
+            <img src="./img/linkedin.jpg" alt="Julio no LinkedIn">
+        </a>
+        <a href="https://github.com/JulioAugusto9">
+            <img src="./img/github.jpg" alt="Julio no GitHub">
+        </a>
+    </div>
+
+    </div>
+    <script src="./js/javascript.js"></script>
+</body>
+</html>
