@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Muda Texto</title>
+    <script src="mudatexto.js"></script>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;  
+        }
+    </style>
+</head>
+<body>  
+    <form name="divContainer" class="container">
+        <input type="text">
+        <div>
+            <label for="Mai">Maiúsculas</label>
+            <input id="Mai" name="chkbxMai" type="checkbox" onclick="maiusc(this)">
+        </div>
+        
+        <div>
+            <label for="Min">Minúsculas</label>
+            <input id="Min" name="chkbxMin" type="checkbox" onclick="minusc(this)">
+        </div>
+    </form>
+</body>
+</html>
