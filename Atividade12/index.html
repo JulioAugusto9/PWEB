@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+    <script src="validar.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80vw;
+        }
+        .titulo {
+            align-self: center;
+        }
+        .textos {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: baseline;
+        }
+        .texto {
+            width: 100%;
+        }
+        h3 {
+            margin-top: 50px;
+        }
+        .botoes {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <form name="formComentario" onsubmit="event.preventDefault(); validar(this)">
+        <h1 class="titulo">Formulário Principal</h1>
+
+        <div class="textos">
+            <label for="">Nome:</label>
+            <input class="texto" type="text">
+            <label for="">E-mail:</label>
+            <input class="texto" type="text">
+            <label for="">Comentário:</label>
+            <textarea class="texto" name="" id="" cols="30" rows="10"></textarea>
+        </div>
+
+        <h3>Pesquisa</h3>
+        <p>Primeira vez nesta página?</p>
+        <div>
+            <input id="sim" type="radio" name="pesquisa" value="sim">
+            <label for="sim">Sim</label>
+            <input id="nao" type="radio" name="pesquisa" value="nao">
+            <label for="nao">Não</label>
+        </div>
+        
+        <div class="botoes">
+            <input type="submit" value="Enviar">
+            <button>Limpar</button>
+        </div>
+        
+    </form>
+</body>
+</html>
